@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text">#CACACA</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="un_text">#837A7A</color>
+    <color name="red">#E50914</color>
+    <color name="blueGray">#747881</color>
+    <color name="lightGray">#EAEBEE</color>
+    <color name="pri_grey">#564d4d</color>
+    <color name="post_grey">#333333</color>
+    <color name="yellow">#FFE500</color>
+    <color name="blue">#256EFE</color>
+    <color name="blueLight">#E9F0FF</color>
+    <color name="blueProgress">#3F85F4</color>
+    <color name="progressUnselect">#E2E2E2</color>
+    <color name="redDark">#E53935</color>
+    <color name="redLight">#FDECEA</color>
+    <color name="greenDark">#3F9542</color>
+    <color name="greenLight">#E8F5E9</color>
+    <color name="waterDark">#00ACC1</color>
+    <color name="waterLight">#E0F7FA</color>
+    <color name="orangeDark">#FB8C00</color>
+    <color name="weightDark">#F9A825</color>
+    <color name="weightLight">#FFF8E1</color>
+
+</resources>

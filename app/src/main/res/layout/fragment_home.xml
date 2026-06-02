@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".activity.fragments.newo.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageLogo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo_ic_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Heart Kit"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
+                    app:layout_constraintStart_toEndOf="@+id/imageLogo"
+                    app:layout_constraintTop_toTopOf="@+id/imageLogo" />
+
+                <ImageView
+                    android:id="@+id/imagePro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/pro_bg"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageLogo" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/heartConst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+                <!-- LEFT SIDE -->
+                <LinearLayout
+                    android:id="@+id/heartRecord"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_14"
+                    android:backgroundTint="@color/blueLight"
+                    android:elevation="1dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation"
+                        android:layout_width="200dp"
+                        android:layout_height="160dp"
+                        android:visibility="visible"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/heart_record" />
+
+                    <TextView
+                        android:id="@+id/bpmRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="No Record"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/measureBtnLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_20"
+                        android:backgroundTint="@color/blueProgress"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:text="Measure Now"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:drawableEndCompat="@drawable/right_arrow" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lastReport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Last Report :"
+                            android:textColor="@color/post_grey"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/lastReportText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="start"
+                            android:text="7 Days ago"
+                            android:textColor="@color/post_grey"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- RIGHT SIDE -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- TOP BOX -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_weight="1"
+                        android:elevation="1dp"
+                        android:background="@drawable/bg_14"
+                        android:backgroundTint="@color/redLight"
+                        tools:ignore="NestedWeights">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/bpScreenBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/image5"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="22dp"
+                                android:src="@drawable/blood_pressure"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/fade_image_overlay"
+                                android:backgroundTint="@color/redLight"
+                                app:layout_constraintBottom_toBottomOf="@+id/image5"
+                                app:layout_constraintEnd_toEndOf="@+id/image5"
+                                app:layout_constraintStart_toStartOf="@+id/image5" />
+
+                            <TextView
+                                android:id="@+id/textbloodPressure"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Blood Pressure"
+                                android:textColor="@color/redDark"
+                                android:textSize="14sp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/bpResult"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/bpResult"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="No Data"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="6dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+
+                    <!-- BOTTOM BOX -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:elevation="1dp"
+                        android:background="@drawable/bg_14"
+                        android:backgroundTint="@color/greenLight">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/bloodSugarBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/image6"
+                                android:layout_width="120dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/blood_sugar"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/fade_image_overlay"
+                                android:backgroundTint="@color/greenLight"
+                                app:layout_constraintBottom_toBottomOf="@+id/image6"
+                                app:layout_constraintEnd_toEndOf="@+id/image6"
+                                app:layout_constraintStart_toStartOf="@+id/image6" />
+
+                            <TextView
+                                android:id="@+id/textbloodSugar"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Blood Sugar"
+                                android:textColor="@color/greenDark"
+                                android:textSize="14sp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/sugarResult"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/sugarResult"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="No Data"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/weightConst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:elevation="1dp"
+                android:background="@drawable/bg_14"
+                android:backgroundTint="@color/blueLight"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/waterConst">
+
+                <ImageView
+                    android:id="@+id/pillsLogo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/weight_log"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/fade_image_overlay"
+                    app:layout_constraintBottom_toBottomOf="@+id/pillsLogo"
+                    app:layout_constraintEnd_toEndOf="@+id/pillsLogo"
+                    app:layout_constraintStart_toStartOf="@+id/pillsLogo"
+                    app:tint="@color/blueLight" />
+
+                <ImageView
+                    android:id="@+id/pillsImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/weight_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Weigth &amp; BMI"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pillsImg"
+                    app:layout_constraintStart_toEndOf="@+id/pillsImg"
+                    app:layout_constraintTop_toTopOf="@+id/pillsImg" />
+
+                <TextView
+                    android:id="@+id/pillsTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="No Data"
+                    android:textColor="@color/blueGray"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/pillsLogo"
+                    app:layout_constraintStart_toStartOf="@+id/pillsImg"
+                    app:layout_constraintTop_toBottomOf="@+id/pillsImg" />
+
+                <TextView
+                    android:id="@+id/pillsClicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/bg_20"
+                    android:backgroundTint="@color/blueProgress"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Add Data"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/plus_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pillsTxt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/waterConst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:elevation="1dp"
+                android:background="@drawable/bg_14"
+                android:backgroundTint="@color/blueLight"
+                android:layout_marginHorizontal="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heartConst">
+
+                <ImageView
+                    android:id="@+id/waterLogo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/water_intake_logo_girl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/fade_image_overlay"
+                    app:layout_constraintBottom_toBottomOf="@+id/waterLogo"
+                    app:layout_constraintEnd_toEndOf="@+id/waterLogo"
+                    app:layout_constraintStart_toStartOf="@+id/waterLogo"
+                    app:tint="@color/blueLight" />
+
+                <ImageView
+                    android:id="@+id/waterImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/small_logo_water"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Water Taken"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/waterImg"
+                    app:layout_constraintStart_toEndOf="@+id/waterImg"
+                    app:layout_constraintTop_toTopOf="@+id/waterImg" />
+
+                <TextView
+                    android:id="@+id/waterTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="No Data"
+                    android:textColor="@color/blueGray"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/waterLogo"
+                    app:layout_constraintStart_toStartOf="@+id/waterImg"
+                    app:layout_constraintTop_toBottomOf="@+id/waterImg" />
+
+                <TextView
+                    android:id="@+id/waterClicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/bg_20"
+                    android:backgroundTint="@color/blueProgress"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Add Data"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/plus_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/waterTxt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

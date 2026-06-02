@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.xchat.activity.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_languageFragment"
+            app:destination="@id/languageFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.xchat.activity.fragments.old.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.xchat.activity.fragments.newo.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_measure"
+            app:destination="@id/measureFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.example.xchat.activity.fragments.newo.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language">
+
+        <action
+            android:id="@+id/action_languageFragment_to_Alt"
+            app:destination="@id/languageAltFragment"
+            app:popUpTo="@id/languageFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/languageAltFragment"
+        android:name="com.example.xchat.activity.fragments.newo.LanguageAltFragment"
+        android:label="fragment_language_alt"
+        tools:layout="@layout/fragment_language_alt" >
+
+        <action
+            android:id="@+id/action_Alt_languageFragment_to_main"
+            app:destination="@id/mainOnboardingFragment"
+            app:popUpTo="@id/languageAltFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainOnboardingFragment"
+        android:name="com.example.xchat.activity.fragments.newo.MainOnboardingFragment"
+        android:label="fragment_main_onboarding"
+        tools:layout="@layout/fragment_main_onboarding">
+
+        <action
+            android:id="@+id/action_Onboarding_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/mainOnboardingFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.xchat.activity.fragments.newo.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/articleTestFragment"
+        android:name="com.example.xchat.activity.fragments.newo.ArticleTestFragment"
+        android:label="fragment_article_test"
+        tools:layout="@layout/fragment_article_test">
+
+        <action
+            android:id="@+id/action_article_home_to_article"
+            app:destination="@id/articleFragment"
+            app:popUpTo="@id/articleTestFragment"
+            app:popUpToInclusive="false"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.xchat.activity.fragments.newo.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" />
+    <fragment
+        android:id="@+id/trackFragment"
+        android:name="com.example.xchat.activity.fragments.newo.TrackFragment"
+        android:label="fragment_track"
+        tools:layout="@layout/fragment_track" />
+    <fragment
+        android:id="@+id/measureFragment"
+        android:name="com.example.xchat.activity.fragments.newo.MeasureFragment"
+        android:label="fragment_measure"
+        tools:layout="@layout/fragment_measure" />
+</navigation>

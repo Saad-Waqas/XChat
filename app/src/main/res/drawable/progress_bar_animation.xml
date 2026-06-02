@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"> <!-- oneshot=false for infinite loop -->
+    <item android:drawable="@drawable/progress_bar_indicator" android:duration="200" />
+    <!-- Add more items if you want a more complex animation, but this is basic sliding -->
+</animation-list>

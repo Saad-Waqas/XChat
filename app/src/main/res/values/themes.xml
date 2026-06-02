@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.XChat" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blueProgress</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/blueProgress</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blueProgress</item>
+        <item name="colorSecondaryVariant">@color/blueProgress</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.XChat" parent="Base.Theme.XChat" />
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+</resources>

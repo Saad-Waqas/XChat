@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/hide_password"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/trackFragment"
+        android:icon="@drawable/hide_password"
+        android:title="Tracking" />
+
+    <item
+        android:id="@+id/articleTestFragment"
+        android:icon="@drawable/hide_password"
+        android:title="Articles" />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/hide_password"
+        android:title="Setting" />
+
+</menu>
